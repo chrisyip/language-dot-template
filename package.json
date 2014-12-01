@@ -1,6 +1,6 @@
 {
   "name": "language-dot-template",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "doT language support in Atom",
   "license": "MIT",
   "engines": {
