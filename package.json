@@ -1,0 +1,24 @@
+{
+  "name": "language-dot-template",
+  "version": "0.0.0",
+  "description": "doT language support in Atom",
+  "license": "MIT",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "keywords": [
+    "atom",
+    "doT",
+    "template",
+    "templating"
+  ],
+  "homepage": "https://github.com/chrisyip/language-dot-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisyip/language-dot-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chrisyip/language-dot-template/issues"
+  }
+}

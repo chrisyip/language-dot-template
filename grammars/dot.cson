@@ -1,0 +1,74 @@
+'scopeName': 'text.html.dot'
+'name': 'HTML (doT)'
+'fileTypes': [
+  'def'
+  'dot'
+  'jst'
+]
+'patterns': [
+  {
+    'include': '#comment'
+  }
+  {
+    'include': '#block-expression-start'
+  }
+  {
+    'include': '#block-expression-end'
+  }
+  {
+    'include': '#escape'
+  }
+  {
+    'include': '#template'
+  }
+  {
+    'include': 'text.html.basic'
+  }
+]
+'repository':
+  'comment':
+    'begin': '\\{\\{!'
+    'end': '\\}\\}'
+    'name': 'comment.block.dot'
+  'block-expression-start':
+    'begin': '\\{\\{([#^])(\\w*)'
+    'beginCaptures':
+      '0':
+        'name': 'entity.name.tag.dot'
+      '1':
+        'name': 'punctuation.definition.block.begin.dot'
+      '2':
+        'name': 'entity.name.function.dot'
+    'end': '\\}\\}'
+    'endCaptures':
+      '0':
+        'name': 'entity.name.tag.dot'
+    'name': 'meta.tag.template.dot'
+  'block-expression-end':
+    'begin': '\\{\\{(/)(\\w*)'
+    'beginCaptures':
+      '0':
+        'name': 'entity.name.tag.dot'
+      '1':
+        'name': 'punctuation.definition.block.end.dot'
+      '2':
+        'name': 'entity.name.function.dot'
+    'end': '\\}\\}'
+    'endCaptures':
+      '0':
+        'name': 'entity.name.tag.dot'
+    'name': 'meta.tag.template.dot'
+  'escape':
+    'begin': '\\{\\{\\{'
+    'end': '\\}\\}\\}'
+    'captures':
+      '0':
+        'name': 'entity.name.tag.dot'
+    'name': 'meta.tag.template.raw.dot'
+  'template':
+    'begin': '\\{\\{[<>]?'
+    'end': '\\}\\}'
+    'captures':
+      '0':
+        'name': 'entity.name.tag.dot'
+    'name': 'meta.tag.template.dot'
